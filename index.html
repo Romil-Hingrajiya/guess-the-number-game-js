@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link rel="shortcut icon" href="./favicon_io/apple-touch-icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .box-shdw {
+      box-shadow: -5px -5px 5px rgb(253 186 116);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-800 p-4">
+  <div class="flex flex-col w-full lg:w-1/2 h-[30rem] sm:h-[25rem] mx-auto items-center mt-8 space-y-8 border-4 border-orange-500 rounded-xl p-2.5 bg-gray-100 box-shdw">
+    <h1 class="bg-orange-100 w-full text-center rounded-xl capitalize text-3xl text-orange-500 py-2.5">guess the correct
+      number by <span class="uppercase font-bold">ROM</span></h1>
+
+    <!-- input for user value and display -->
+    <input type="number" id="userValue"
+      class="border-2 border-orange-500 px-7 py-2 rounded-xl bg-orange-100 text-xl text-orange-500 placeholder-orange-500 focus:outline-orange-500 focus:text-orange-500 active:text-orange-500"
+      placeholder="Enter Among ( 1-100 )" />
+
+    <button onclick="checkingValue()"
+      class="bg-orange-200 border-2 border-orange-500 rounded-xl p-3 px-5 text-orange-500 font-extrabold tracking-wider">SUBMIT</button>
+
+    <!-- provide empty space for feedback or message -->
+    <div id="feedbackContainer" class="w-full flex flex-col items-center rounded-xl p-5">
+      <h6 id="message" class="font-bold text-xl text-justify"></h6>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
